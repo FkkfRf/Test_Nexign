@@ -23,6 +23,7 @@ public class MainPage {
         searchInHeaderControls.click();
         return this;
     }
+
     public MainPage searchTextSetValue(String searchTextSet) {
         searchTextInput.setValue(searchTextSet);
         return this;
