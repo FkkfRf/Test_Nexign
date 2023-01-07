@@ -7,9 +7,11 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import page.MainPage;
+
 import static io.qameta.allure.Allure.step;
 
 public class SearchTest extends BaseTest {
+    private final static String searchText = "мегафон";
     page.MainPage MainPage = new MainPage();
 
     @Feature("Главная страница сайта")
@@ -24,9 +26,15 @@ public class SearchTest extends BaseTest {
         step("Кликаем по иконке поиска ", () -> {
             MainPage.clickSearchInHeaderControls();
         });
-        step("Вводим текст для поиска", () -> {
-            MainPage.searchTextSetValue("Мегафон");
+        step("Вводим текст в поле поиска", () -> {
+            MainPage.searchTextSetValue(searchText);
         });
-    }
+        step("Переходим по первой ссылке", () -> {
+            MainPage.openSearchLink();
+        });
+        step("Проеряем, что такой текст есть на странице", () -> {
+            MainPage.searchTextCheck(searchText);
+        });
 
+    }
 }
