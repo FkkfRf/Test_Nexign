@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import page.MainPage;
 
 import static io.qameta.allure.Allure.step;
-import static java.lang.Thread.sleep;
 
 public class HeaderControlsTest extends BaseTest {
     private final static String WELCOME_BANNER_TEXT_RUS = "Безграничные возможности монетизации традиционных и новых цифровых услуг";
@@ -41,7 +40,6 @@ public class HeaderControlsTest extends BaseTest {
         });
     }
 
-
     @Feature("Проверка панели элементов")
     @DisplayName("Проверка переключения языка")
     @Owner("FkkfRf")
@@ -61,8 +59,25 @@ public class HeaderControlsTest extends BaseTest {
             MainPage.selectLanguageInHeaderControls("RUS");
         });
         step("Проверям, что язык установлен  RUS ", () -> {
-            sleep(3000);
             MainPage.checkWelcomeBannerText(WELCOME_BANNER_TEXT_RUS);
+        });
+    }
+
+    @Feature("Проверка панели элементов")
+    @DisplayName("Проверка перехода в клиентский портал")
+    @Owner("FkkfRf")
+    @Link(url = "https://nexign.com/ru")
+    @Test
+    void openClientportalTest() {
+        step("Открываем сайт", () -> {
+            MainPage.openPage();
+            MainPage.checkWelcomeBannerText(WELCOME_BANNER_TEXT_RUS);
+        });
+        step("Кликаем по иконке клиентского портала  ", () -> {
+            MainPage.clickClientInHeaderControls();
+        });
+        step("Проверяем, что открылась станица клиентского портала", () -> {
+            MainPage.checkClientPortalText();
         });
     }
 }

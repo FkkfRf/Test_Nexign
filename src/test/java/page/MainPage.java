@@ -6,15 +6,18 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-public class MainPage {
 
+public class MainPage {
     private final static SelenideElement
             welcomeBannerText = $(".welcome-banner__content-subtitle"),
+            clientPortalText = $(".portal-name"),
             searchInHeaderControls = $(".header__search "),
             searchTextInput = $("[id=edit-search-api-fulltext]"),
             searchLink = $(".line-group-search"),
             searchTextCheck = $(".page-content"),
-            languageSet = $(".language");
+            languageInHeaderControls = $(".language"),
+            clientInHeaderControls = $(".header__client");
+
 
     public MainPage openPage() {
         open(baseUrl);
@@ -47,8 +50,16 @@ public class MainPage {
     }
 
     public MainPage selectLanguageInHeaderControls(String selectLanguage) {
-        languageSet.click();
+        languageInHeaderControls.click();
         $(byText(selectLanguage)).click();
+        return this;
+    }
+    public MainPage clickClientInHeaderControls() {
+        clientInHeaderControls.click();
+        return this;
+    }
+    public MainPage checkClientPortalText() {
+        clientPortalText.shouldHave(text("Клиентский портал АО «Нэксайн»"));
         return this;
     }
 }
