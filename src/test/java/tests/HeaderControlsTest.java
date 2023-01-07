@@ -43,7 +43,7 @@ public class HeaderControlsTest extends BaseTest {
 
 
     @Feature("Проверка панели элементов")
-    @DisplayName("Проверка ереключения языка")
+    @DisplayName("Проверка переключения языка")
     @Owner("FkkfRf")
     @Link(url = "https://nexign.com/ru")
     @Test
