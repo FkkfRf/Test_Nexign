@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
     private final static SelenideElement
             welcomeBannerText = $(".welcome-banner__content-subtitle"),
-            clientPortalText = $(".portal-name"),
+            clientPortalLogo = $(".logo-client"),
             searchInHeaderControls = $(".header__search "),
             searchTextInput = $("[id=edit-search-api-fulltext]"),
             searchLink = $(".line-group-search"),
@@ -54,12 +54,15 @@ public class MainPage {
         $(byText(selectLanguage)).click();
         return this;
     }
+
     public MainPage clickClientInHeaderControls() {
         clientInHeaderControls.click();
+        switchTo().window(1);
         return this;
     }
+
     public MainPage checkClientPortalText() {
-        clientPortalText.shouldHave(text("Клиентский портал АО «Нэксайн»"));
+        clientPortalLogo.shouldHave(text("Client"));
         return this;
     }
 }
