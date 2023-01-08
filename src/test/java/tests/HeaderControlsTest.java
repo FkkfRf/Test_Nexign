@@ -16,7 +16,7 @@ public class HeaderControlsTest extends BaseTest {
     private final static String searchText = "мегафон";
     MainPage MainPage = new MainPage();
 
-    @Feature("Проверка панели элементов")
+    @Feature("Проверка панели элементов на главной станице сайта")
     @DisplayName("Проверка поиска по сайту")
     @Owner("FkkfRf")
     @Link(url = "https://nexign.com/ru")
@@ -40,7 +40,7 @@ public class HeaderControlsTest extends BaseTest {
         });
     }
 
-    @Feature("Проверка панели элементов")
+    @Feature("Проверка панели элементов на главной станице сайта")
     @DisplayName("Проверка переключения языка")
     @Owner("FkkfRf")
     @Link(url = "https://nexign.com/ru")
@@ -63,7 +63,7 @@ public class HeaderControlsTest extends BaseTest {
         });
     }
 
-    @Feature("Проверка панели элементов")
+    @Feature("Проверка панели элементов на главной станице сайта")
     @DisplayName("Проверка перехода в клиентский портал")
     @Owner("FkkfRf")
     @Link(url = "https://nexign.com/ru")
