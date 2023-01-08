@@ -19,7 +19,7 @@ import static io.qameta.allure.Allure.step;
 public class CareerPageTest extends BaseTest {
     CareerPage CareerPage = new CareerPage();
 
-    @Feature("Проверка раздела Nexign Career")
+    @Feature("Проверка раздела Nexign Career job.nexign.com")
     @DisplayName("Проверка перехода по элементам меню")
     @Owner("FkkfRf")
     @Link(url = "https://job.nexign.com/")
@@ -38,8 +38,8 @@ public class CareerPageTest extends BaseTest {
         });
     }
 
-    @Feature("Проверка раздела Nexign Career")
-    @Story("Проверка выбора региона с вакансиями")
+    @Feature("Проверка раздела Nexign Career job.nexign.com")
+    @DisplayName("Проверка выбора региона с вакансиями")
     @Owner("FkkfRf")
     @Link(url = "https://job.nexign.com/")
     @ValueSource(strings = {"Санкт-Петербург", "Москва", "Краснодар", "Самара", "Новосибирск", "Владивосток"})
