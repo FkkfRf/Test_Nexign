@@ -1,14 +1,19 @@
 package page;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CareerPage {
-    private final static SelenideElement
-            contentText = $(".header-new__content");
+    private final SelenideElement
+            contentText = $(".header-new__content"),
+            sectionOfficesTitleText = $(".offices__title"),
+            careerCityName = $(byCssSelector(".select2")),
+    careerCityCardTitle = $(".vacancy-card__suptitle");
 
     public CareerPage openPage() {
         open(baseUrl.replace("nexign.com/ru", "job.nexign.com"));
@@ -24,4 +29,18 @@ public class CareerPage {
         $$(".header-new__list-item").findBy(text(nameMenuElement)).click();
         return this;
     }
+
+    public CareerPage checkOfficesSectionText(String careerSectionText) {
+        sectionOfficesTitleText.shouldHave(text(careerSectionText));
+        return this;
+    }
+    public CareerPage setCareerCityOptions(String careerCityOptions) {
+        careerCityName.selectOptionContainingText(careerCityOptions);
+        return this;
+    }
+    public CareerPage checkCareerCityCard(String careerCityName) {
+        careerCityCardTitle.shouldHave(text(careerCityName));
+        return this;
+    }
+
 }

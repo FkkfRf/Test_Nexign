@@ -9,6 +9,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static io.qameta.allure.Allure.step;
@@ -16,8 +18,10 @@ import static io.qameta.allure.Allure.step;
 public class BaseTest {
     @BeforeAll
     static void setUp() {
-        ProjectProvider.configBase();
 
+
+
+        ProjectProvider.configBase();
         step("Устанавливаем интеграцию с Selenide", () ->
                 SelenideLogger.addListener("AllureSelenide", new AllureSelenide()));
         step("Устанавливаем конфигурацию", () -> {
@@ -25,7 +29,10 @@ public class BaseTest {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
+            Selenide.clearBrowserCookies();
+
         });
+
     }
 
     @AfterEach

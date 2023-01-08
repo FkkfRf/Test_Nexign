@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
-    private final static SelenideElement
+    private final SelenideElement
             welcomeBannerText = $(".welcome-banner__content-subtitle"),
             clientPortalLogo = $(".logo-client"),
             searchInHeaderControls = $(".header__search "),
