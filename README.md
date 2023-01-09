@@ -138,9 +138,9 @@ gradle test -Denv=remote
   <img src="images/screenshots/JenkinsMain.PNG" alt="job">
 </p>
 
-*После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
+После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
 значок <img width="2%" title="Allure Report" src="images/logo/AllureReport-logo.svg"><code><strong>*Allure
-Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.
 
 ## :white_check_mark: Отчет о результатах тестирования в Allure Report
 
