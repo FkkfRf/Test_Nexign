@@ -6,24 +6,15 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ProjectProvider;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static io.qameta.allure.Allure.step;
-import static org.openqa.selenium.remote.CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR;
-import static org.openqa.selenium.remote.CapabilityType.UNHANDLED_PROMPT_BEHAVIOUR;
 
 public class BaseTest {
     @BeforeAll
     static void setUp() {
-
-
-
         ProjectProvider.configBase();
         step("Устанавливаем интеграцию с Selenide", () ->
                 SelenideLogger.addListener("AllureSelenide", new AllureSelenide()));
@@ -33,7 +24,6 @@ public class BaseTest {
             capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
             Selenide.clearBrowserCookies();
-
         });
 
     }
@@ -46,15 +36,11 @@ public class BaseTest {
             Attach.browserConsoleLogs();
             Attach.addVideo();
         });
-    }
-
-    @AfterAll
-    static void CloseWebDriver() {
-        step("закрываем вебдрайвер", () -> {
-                    Selenide.closeWindow();
-                    Selenide.closeWebDriver();
-                }
-        );
+        step("закрываем браузер и вебдрайвер", () -> {
+            Selenide.clearBrowserCookies();
+            Selenide.closeWindow();
+            Selenide.closeWebDriver();
+        });
     }
 
 }
