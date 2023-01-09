@@ -8,8 +8,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import page.MainPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static page.MainPage.WELCOME_BANNER_TEXT_RUS;
@@ -31,17 +29,10 @@ public class MainPageMenuTest extends BaseTest {
             MainPage.clickItemInMainMenu("Контакты");
         });
         step("Кликаем по переключателю 'Показать региональные контакты'", () -> {
-            $("[data-open='Показать региональные контакты']").click();
-            //MainPage.clickPartWorldSwitch();
+            MainPage.clickPartWorldSwitch();
         });
-        step("Проверяем отображение списка контактов 'Европа и Центральная Азия'", () -> {
-            $(".part-world__city").shouldBe(visible);
-        });
-        step("Кликаем по переключателю 'Скрыть региональные контакты'", () -> {
-            $("[data-close='Скрыть региональные контакты']").click();
-        });
-        step("Проверяем отсутствие списка контактов 'Европа и Центральная Азия'", () -> {
-          $(".part-world__city").shouldNotBe(visible);
+        step("Проверяем отображение списка контактов", () -> {
+            MainPage.checkPartWorldCityVisible();
         });
     }
 

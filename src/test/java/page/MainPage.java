@@ -4,6 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -20,7 +21,8 @@ public class MainPage {
             searchTextCheck = $(".page-content"),
             languageInHeaderControls = $(".language"),
             clientInHeaderControls = $(".header__client"),
-            partWorldSwitch = $(".part-world__switch"),
+            partWorldSwitch = $("[data-open='Показать региональные контакты']"),
+            partWorldCity = $(".part-world__city"),
             inTouchButton = $(".get-in-touch__button"),
             inTouchPopup = $(".get-in-touch__popup");
 
@@ -80,6 +82,11 @@ public class MainPage {
 
     public MainPage clickPartWorldSwitch() {
         partWorldSwitch.click();
+        return this;
+    }
+
+    public MainPage checkPartWorldCityVisible() {
+        partWorldSwitch.shouldBe(visible);
         return this;
     }
 
