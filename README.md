@@ -44,7 +44,6 @@
    автотесты для UI*
 >- *<code><strong>*Gradle*</strong></code> - сборка проекта*
 >- *<code><strong>*JUnit 5*</strong></code> - фреймворк для модульного тестирования*
->- *<code><strong>REST Assured</strong></code> - тестирования REST-сервисов*
 >- *<code><strong>*Jenkins*</strong></code> - запуск тестов*
 >- *<code><strong>*Selenoid*</strong></code> - запуска браузеров в контейнерах <code><strong>*Docker*</strong></code>.*
 >- *<code><strong>*Allure Report*</strong></code> - визуализации результатов тестирования*
