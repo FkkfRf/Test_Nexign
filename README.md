@@ -83,12 +83,17 @@
 
 ## :white_check_mark: Запуск тестов из терминала
 
+*Чтобы запуск тестов легче конфигурирровать, без внесения правок в код, использовалась библиотека owner*
+
+*В этом случае параметры запуска выносятся в файлы properties*
+
+> <code>Property</code> файл расположен в директории <code>src/test/resources/config/</code>.
+> 
 #### ✓ Локальный запуск тестов
 
 ```bash
 gradle test -Denv=local  
 ```
-
 #### ✓ Удаленный запуск тестов
 
 ```bash
@@ -105,17 +110,21 @@ gradle test -Denv=remote
 >
 > <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты
 
-> <code>Property</code> файл расположен в директории <code>src/test/resources/config/</code>.
+
 
 ## :white_check_mark: Запуск тестов в Jenkins
 
 <img width="4%" title="Jenkins" src="images/logo/Jenkins-logo.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/C15-FkkfRf-Test-Nexign/)
 
-*Для обеспечения мобильности выбора параметров при запуске теста из Jenkins, в настройках задаём варианты параметров для запуска:*
+
+*Для обеспечения мобильности выбора параметров при запуске теста из Jenkins,*
+
+*в настройках сборки задаём варианты параметров для запуска:*
 
 <p align="center">
   <img src="images/screenshots/JenkinsParam.PNG" alt="job">
 </p>
+
 
 *Затем выбираем "Собрать с параметрами" и указываем необходимые*
 <p align="center">
