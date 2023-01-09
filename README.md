@@ -111,13 +111,19 @@ gradle test -Denv=remote
 
 <img width="4%" title="Jenkins" src="images/logo/Jenkins-logo.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/C15-FkkfRf-Test-Nexign/)
 
-*Для запуска теста с необходимыми параметрами, указываем Property файл в настройках сборки проета*
+*Для обеспечения мобильности выбора параметров при запуске теста из Jenkins, в настройках задаём варианты параметров для запуска:*
 
 <p align="center">
   <img src="images/screenshots/JenkinsParam.PNG" alt="job">
 </p>
 
-*Основная страница проекта в Jenkins*
+*Затем выбираем "Собрать с параметрами" и указываем необходимые*
+<p align="center">
+  <img src="images/screenshots/JenkinsParam2.PNG" alt="job">
+</p>
+
+
+#### Основная страница проекта в Jenkins
 
 <p align="center">
   <img src="images/screenshots/JenkinsMain.PNG" alt="job">
