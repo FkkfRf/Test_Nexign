@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 import page.MainPage;
 
 import static io.qameta.allure.Allure.step;
+import static page.MainPage.WELCOME_BANNER_TEXT_ENG;
+import static page.MainPage.WELCOME_BANNER_TEXT_RUS;
 
 public class HeaderControlsTest extends BaseTest {
-    private final static String WELCOME_BANNER_TEXT_RUS = "Безграничные возможности монетизации традиционных и новых цифровых услуг";
-    private final static String WELCOME_BANNER_TEXT_ENG = "Advanced monetization on a single convergent platform";
     private final static String searchText = "мегафон";
     MainPage MainPage = new MainPage();
 

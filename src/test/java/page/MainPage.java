@@ -1,5 +1,6 @@
 package page;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -8,6 +9,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
+    public final static String WELCOME_BANNER_TEXT_RUS = "Безграничные возможности монетизации традиционных и новых цифровых услуг";
+    public final static String WELCOME_BANNER_TEXT_ENG = "Advanced monetization on a single convergent platform";
     private final SelenideElement
             welcomeBannerText = $(".welcome-banner__content-subtitle"),
             clientPortalLogo = $(".logo-client"),
@@ -16,8 +19,12 @@ public class MainPage {
             searchLink = $(".line-group-search"),
             searchTextCheck = $(".page-content"),
             languageInHeaderControls = $(".language"),
-            clientInHeaderControls = $(".header__client");
+            clientInHeaderControls = $(".header__client"),
+            partWorldSwitch = $(".part-world__switch"),
+            inTouchButton = $(".get-in-touch__button"),
+            inTouchPopup = $(".get-in-touch__popup");
 
+    private final ElementsCollection menuItems = $$(".menu-item ");
 
     public MainPage openPage() {
         open(baseUrl);
@@ -63,6 +70,26 @@ public class MainPage {
 
     public MainPage checkClientPortalText() {
         clientPortalLogo.shouldHave(text("Client"));
+        return this;
+    }
+
+    public MainPage clickItemInMainMenu(String menuItem) {
+        menuItems.findBy(text(menuItem)).click();
+        return this;
+    }
+
+    public MainPage clickPartWorldSwitch() {
+        partWorldSwitch.click();
+        return this;
+    }
+
+    public MainPage clickInTouchButton() {
+        inTouchButton.click();
+        return this;
+    }
+
+    public MainPage checkInTouchPopup(String inTouchPopupTitle) {
+        inTouchPopup.shouldHave(text(inTouchPopupTitle));
         return this;
     }
 }
