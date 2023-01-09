@@ -115,17 +115,17 @@ gradle test -Denv=remote
 *Для запуска теста с необходимыми параметрами, указываем Property файл в настройках сборки проета*
 
 <p align="center">
-  <img src="images/screenshots/JenkinsParam.PNG" alt="job" width="800">
+  <img src="images/screenshots/JenkinsParam.PNG" alt="job">
 </p>
 
 *Основная страница проекта в Jenkins*
 
 <p align="center">
-  <img src="images/screenshots/JenkinsMain.PNG" alt="job" width="800">
+  <img src="images/screenshots/JenkinsMain.PNG" alt="job">
 </p>
 
 *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
-значок <img width="2%" title="Allure Report" src="images/logo/AllureREport-logo.svg"><code><strong>*Allure
+значок <img width="2%" title="Allure Report" src="images/logo/AllureReport-logo.svg"><code><strong>*Allure
 Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
 
 ## :white_check_mark: Отчет о результатах тестирования в Allure Report
@@ -151,13 +151,13 @@ Report*</strong></code>, кликнув по которому, откроетс�
 > <code>*EXECUTORS*</code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
 
 <p align="center">
-  <img src="images/screenshots/Allure1.PNG" alt="Allure Report" width="900">
+  <img src="images/screenshots/Allure1.PNG" alt="Allure Report" >
 </p>
 
 #### ✓ В разделе Behaviors тесты отображаются  сгруппироваными в многоуровневый список:*
 
 <p align="center">
-  <img src="images/screenshots/Allure2.PNG" alt="Allure Report" width="900">
+  <img src="images/screenshots/Allure2.PNG" alt="Allure Report">
 </p>
 
 ## :white_check_mark: Интеграция с Allure TestOps
@@ -167,13 +167,13 @@ Report*</strong></code>, кликнув по которому, откроетс�
 #### ✓ Основной дашборд
 
 <p align="center">
-  <img src="images/screenshots/TestOpsMainDashboard.PNG" alt="dashboards" width="900">
+  <img src="images/screenshots/TestOpsMainDashboard.PNG" alt="dashboards"">
 </p>
 
 #### ✓ Тест-кейсы
 
 <p align="center">
-  <img src="images/screenshots/TestOpsTestCases.PNG" alt="test cases" width="900">
+  <img src="images/screenshots/TestOpsTestCases.PNG" alt="test cases">
 </p>
 
 ## :white_check_mark: Уведомления в Telegram с использованием бота
@@ -195,6 +195,6 @@ Report*</strong></code>, кликнув по которому, откроетс�
 <img width="4%" title="Selenoid" src="images/logo/Selenoid-logo.svg">
   </p>
 <p align="center">
-  <img title="Selenoid Video" src="images/screenshots/Selenoid.mp4" width="500">
+  <img title="Selenoid Video" src="images/screenshots/Selenoid.gif" width="500">
 </p>
 
