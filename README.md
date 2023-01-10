@@ -124,6 +124,19 @@ gradle test -Denv=remote
   <img src="images/screenshots/JenkinsParam.PNG" alt="job">
 </p>
 
+В этом лучае скрипт запуска из Jenkins будет следующим:
+
+> clean 
+> 
+> test 
+> 
+> -D**browse**r=${BROWSER} 
+> 
+> -D**browserVersion**=${BROWSER_VER} 
+> 
+> -D**browserSize**=${BROWSER_SIZE} 
+> 
+> -D**remote**=${REMOTE_URL}
 
 Затем выбираем "Собрать с параметрами" и указываем необходимые
 
