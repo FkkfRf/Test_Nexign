@@ -109,6 +109,8 @@ gradle test -Denv=remote
 > **browserVersion** – версия браузера, в которой будут выполняться тесты
 >
 > **browserSize** – размер окна браузера, в котором будут выполняться тесты
+> 
+> **remoteUrl** –  адрес удаленного сервера, на котором будут запускаться тесты
 
 
 
@@ -136,7 +138,7 @@ gradle test -Denv=remote
 > 
 > -D**browserSize**=${BROWSER_SIZE} 
 > 
-> -D**remote**=${REMOTE_URL}
+> -D**remoteUrl**=${REMOTE_URL}
 
 Затем выбираем "Собрать с параметрами" и указываем необходимые
 
