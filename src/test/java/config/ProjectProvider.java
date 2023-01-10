@@ -11,7 +11,6 @@ public class ProjectProvider {
         Configuration.browser = ProjectProvider.configBase.getBrowser();
         Configuration.browserVersion = ProjectProvider.configBase.getBrowserVersion();
         Configuration.browserSize = ProjectProvider.configBase.getBrowserSize();
-
         String remoteUrl = ProjectProvider.configBase.getRemoteURL();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;
