@@ -2,9 +2,9 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-//@Config.Sources({
-//"classpath: config/${env}.properties"
-//})
+@Config.Sources({
+        "classpath:config/${env}.properties"
+})
 public interface BaseTestConfig extends Config {
     @Key("baseUrl")
     @DefaultValue("https://nexign.com/ru")
@@ -21,7 +21,7 @@ public interface BaseTestConfig extends Config {
     @Key("browserSize")
     String getBrowserSize();
 
-    @Key("remoteUrl")
+    @Key("remote")
     String getRemoteURL();
 }
 
