@@ -138,7 +138,7 @@ gradle test -Denv=remote
 > 
 > -D**browserSize**=${BROWSER_SIZE} 
 > 
-> -D**remoteUrl**=${REMOTE_URL}
+> -D**remote**=${REMOTE_URL}
 
 Затем выбираем "Собрать с параметрами" и указываем необходимые
 
