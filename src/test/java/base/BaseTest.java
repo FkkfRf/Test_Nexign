@@ -36,9 +36,7 @@ public class BaseTest {
             Attach.browserConsoleLogs();
             Attach.addVideo();
         });
-        step("закрываем браузер и вебдрайвер", () -> {
-            Selenide.clearBrowserCookies();
-            Selenide.closeWindow();
+        step("закрываем вебдрайвер", () -> {
             Selenide.closeWebDriver();
         });
     }
