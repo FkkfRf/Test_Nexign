@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:config/${env}.properties"
 })
-public interface BaseTestConfig extends Config {
+public interface BaseConfig extends Config {
     @Key("baseUrl")
     @DefaultValue("https://nexign.com/ru")
     String getBaseUrl();
