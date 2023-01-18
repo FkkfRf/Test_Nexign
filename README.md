@@ -48,7 +48,7 @@
 >- *<code><strong>*Selenoid*</strong></code> - запуска браузеров в контейнерах <code><strong>*Docker*</strong></code>.*
 >- *<code><strong>*Allure Report*</strong></code> - визуализации результатов тестирования*
 >- *<code><strong>*Allure TestOps*</strong></code> - управление тестами*
->- *<code><strong>*Jira, Telegram Bot*</strong></code> - уведомление о результатах тестирования*
+>- *<code><strong>*Telegram Bot*</strong></code> - уведомление о результатах тестирования*
 
 ## :chart: Реализованы проверки
 
