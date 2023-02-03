@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования сайта компании Nexign
+## Проект по автоматизации тестирования сайта компании Nexign
 
 
 <code><img width="50%" title="GitHub" src="images/icons/Nexign-logo.svg"></code>
